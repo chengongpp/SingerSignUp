@@ -3,7 +3,7 @@
 
     try {
         $dbh = new PDO("mysql:host={$db_config['host']};dbname={$db_config['dbName']}", $db_config['user'], $db_config['pwd'], [PDO::ATTR_PERSISTENT => true, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"]);
-    } catch (PDOExveption $e) {
+    } catch (PDOException $e) {
         print('{"result":"Database Fatal"');
         die();
     }
@@ -32,5 +32,5 @@
         $filename = iconv("utf-8","gbk", $filename); 
         copy(iconv("utf-8","gbk", '../FILE/'.$row['file']), $filename);
     }
-    print("宏富文件收集完成\n");
+    print("宏福文件收集完成\n");
 ?>
