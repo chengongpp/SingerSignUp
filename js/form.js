@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
-	
-	$('#buptid').change(function(){//注册
+	var $buptid = $('#buptid');
+	$buptid.change(function(){//注册
 		$.ajax({
 			type:"POST",
 			url:"API/signIn.php",
@@ -11,7 +11,7 @@ $(document).ready(function(){
 				"pwd":""
 			},
 			success:function(data){
-				if(data.result == "NewUser"){
+				if(data.result === "NewUser"){
 					//Materialize.toast("注册成功！", 6000);
 				}
 				else {
@@ -35,11 +35,11 @@ $(document).ready(function(){
 			url:"API/signIn.php",
 			dataType:"json",
 			data:{
-				"studentID": $('#buptid').val(),
+				"studentID": $buptid.val(),
 				"pwd":""
 			},
 			success:function(data){
-				if(data.result == "NewUser"){
+				if(data.result === "NewUser"){
 					//Materialize.toast("注册成功！", 6000);
 				}
 				else {
@@ -56,10 +56,11 @@ $(document).ready(function(){
 
 		var url = "API/info.php"; // the script where you handle the form input.
 		
-		var sub = new Object;
-		sub.studentID = $("#buptid").val();
-		if ($("#password").val() != "") {
-			sub.pwd = hex_md5(b64_md5(hex_md5($("#password").val())));
+		var sub = {};
+		sub.studentID = $buptid.val();
+		var pwval = $("#password").val();
+		if (pwval !== "") {
+			sub.pwd = hex_md5(b64_md5(hex_md5(pwval)));
 		} else {
 			Materialize.toast("请填写密码", 6000);
 			e.preventDefault(); // avoid to execute the actual submit of the form.
@@ -87,10 +88,10 @@ $(document).ready(function(){
 			dataType:"json",
 			data:sub,
 			success: function(data){
-				if(data.result == "Succeeded"){
+				if(data.result === "Succeeded"){
 					Materialize.toast("提交成功！", 6000);
 				}
-				else if(data.result == "Forbidden"){
+				else if(data.result === "Forbidden"){
 					Materialize.toast("未注册，提交失败！请检查学号！", 6000);
 				}
 				else Materialize.toast("提交失败！请把信息填写完整", 6000);

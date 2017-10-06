@@ -57,9 +57,9 @@ $(document).ready(function(){
 			valid_extensions : ['mp3','wav', 'aac', 'flac', 'm4a'],
 			onComplete: function(response) {
 				$("#upload-progress").hide();
-				if (response == "Succeeded") {
+				if (response === "Succeeded") {
 					Materialize.toast("文件上传完成", 6000);
-				} else if (response == "Forbidden") {
+				} else if (response === "Forbidden") {
 					Materialize.toast("未注册，提交失败！请检查学号！", 6000);
 				} else {
 					Materialize.toast("上传失败！请阅读报名须知并检查文件大小和类型", 6000);
