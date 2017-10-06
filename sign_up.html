@@ -13,7 +13,7 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-    
+
     <div class="navbar-fixed">
   <nav class="teal" role="navigation">
     <div class="nav-wrapper container">
@@ -56,9 +56,9 @@
     </div>
   </div>
 
-  
+
   <br><br><br>
- 
+
         <div id="you-are-in" class="modal">
             <div class="modal-content">
             <p>你已经注册了</p>
@@ -70,7 +70,7 @@
 
         <div class="container">
             <ul class="collapsible popout" data-collapsible="accordion">
-				<li>	
+				<li>
                     <div class="collapsible-header"><i class="material-icons">account_box</i>个人信息</div>
                     <div class="collapsible-body">
                         <div class="container in-collapsible">
@@ -79,7 +79,7 @@
                                     <div class="row"><br>
 										<div class="input-field col s12 m6">
                                             <i class="material-icons prefix">perm_identity</i>
-                                            <input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" 
+                                            <input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"
 											id="buptid" name="buptid" type="text" >
                                             <label for="buptid">学号</label>
                                         </div>
@@ -176,6 +176,7 @@
 										<label for="way">是否清唱</label>
                                     </div>
 								</div>
+
 								<div class="row">
                                     <div class="input-field col s12">
 										  <input name="single_or_group" type="radio" id="app_for_single" value="single" />
@@ -188,22 +189,83 @@
 										  <label for="app_for_group">组队参赛</label><br><br><br>
                                     </div>
                                     <div id="group_pos"><br><br><br>
-										<div class="input-field col s12">
+                                        <div class="input-field col s12 m6 l6">
                                             <i class="material-icons prefix">settings_voice</i>
                                             <input id="team_name" name="team_name" type="text">
                                             <label for="team_name">队名</label>
-										</div>
-										<div class="input-field col s12">
-                                            <i class="material-icons prefix">supervisor_account</i>
-                                            <input id="number" name="number" type="text" placeholder="不得超过6人">
-                                            <label for="number">参赛人数</label>
-										</div>
-										<div class="input-field col s12">
-											<textarea id="others" name="others" class="materialize-textarea" 
-												  length="200"></textarea>
-											<label for="others">详细信息</label>
-											<span>请在上面横线上填写你萌队里其他小伙伴的姓名和学号哦●ω●~例如：张三2015211633+李四2015211366</span>
-										</div>
+                                        </div>
+                                        <div class="input-field col s12 m6 l6">
+                                            <select id="number" name="number">
+                                                <option value="" disabled selected>请选择(不得超过6人)</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                            </select>
+                                            <label>参赛人数</label>
+                                        </div>
+                                        <div class="col s12 m2 l2">
+                                            <div class="input-field">
+                                                <input id="com1_name" type="text">
+                                                <label for="com1_name">队员1姓名</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m4 l4">
+                                            <div class="input-field">
+                                                <input id="com1_id"  type="text">
+                                                <label for="com1_id">队员1学号</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m2 l2">
+                                            <div class="input-field">
+                                                <input id="com2_name" type="text">
+                                                <label for="com2_name">队员2姓名</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m4 l4">
+                                            <div class="input-field">
+                                                <input id="com2_id" type="text">
+                                                <label for="com2_id">队员2学号</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m2 l2">
+                                            <div class="input-field">
+                                                <input id="com3_name" type="text">
+                                                <label for="com3_name">队员3姓名</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m4 l4">
+                                            <div class="input-field">
+                                                <input id="com3_id" type="text">
+                                                <label for="com3_id">队员3学号</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m2 l2">
+                                            <div class="input-field">
+                                                <input id="com4_name" type="text">
+                                                <label for="com4_name">队员4姓名</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m4 l4">
+                                            <div class="input-field">
+                                                <input id="com4_id" type="text">
+                                                <label for="com4_id">队员4学号</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m2 l2">
+                                            <div class="input-field">
+                                                <input id="com5_name" type="text">
+                                                <label for="com5_name">队员5姓名</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m4 l4">
+                                            <div class="input-field">
+                                                <input id="com5_id" type="text">
+                                                <label for="com5_id">队员5学号</label>
+                                            </div>
+                                        </div>
+                                        <span>请在上面横线上填写你萌队里其他小伙伴的姓名和学号哦(不需要用到的队员位置留空)●ω●~</span>
                                     </div>
                                 </div>
                             </div>
@@ -212,14 +274,14 @@
                 </li>
 			</ul>
         </div>
-    
+
 	<div class="center">
                 <button id="submit_btn" class="btn waves-effect waves-light"
                         data-position="bottom" data-delay="50" type="submit">提交
                     <i class="material-icons right">send</i>
                 </button>
     </div><br>
-	
+
         <div class="container">
             <ul class="collapsible popout" data-collapsible="accordion">
 				<li>
@@ -259,9 +321,9 @@
 			</ul>
 		</div>
 
-                
+
   <br><br><br>
-  
+
 
 
   <div class="parallax-container valign-wrapper">
@@ -300,7 +362,7 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/jquery.ajaxfileupload.js"></script>
   <script src="js/md5.js"></script>

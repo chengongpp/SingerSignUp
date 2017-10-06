@@ -80,8 +80,16 @@ $(document).ready(function(){
 		if (isNaN(sub.teamPeople)) {
 			sub.teamPeople = 1;
 		}
-		sub.teamInfo = $("#others").val();
-		
+		if (sub.teamPeople !== 1){
+			var teaminfo = {};
+			teaminfo.push($('#com1_name').val(),$('#com1_id').val());
+			teaminfo.push($('#com2_name').val(),$('#com2_id').val());
+			teaminfo.push($('#com3_name').val(),$('#com3_id').val());
+			teaminfo.push($('#com4_name').val(),$('#com4_id').val());
+			teaminfo.push($('#com5_name').val(),$('#com5_id').val());
+            sub.teamInfo = json.stringify(teaminfo);
+        }else sub.teamInfo = null;
+
 		$.ajax({
 			type: "POST",
 			url: url,
@@ -101,6 +109,9 @@ $(document).ready(function(){
 		});
 		e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
+
+
+
 });
 
 
