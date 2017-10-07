@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh_CN">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -17,7 +17,7 @@
     <div class="navbar-fixed">
   <nav class="teal" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="index.html" class="brand-logo white-text">三笙有杏</a>
+        <a id="logo-container" href="index.html" class="brand-logo"><img src="img/logo.png"></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.html" class="white-text">首页</a></li>
         <li><a href="sign_up.html" class="white-text">报名</a></li>
@@ -93,8 +93,8 @@
                                             <select id="campus" name="campus">
                                                 <option value="" disabled selected>请选择</option>
                                                 <option value="西土城校区">西土城</option>
-                                                <option value="沙河校区" disabled>沙河</option>
-                                                <option value="宏福校区" disabled>宏福</option>
+                                                <option value="沙河校区">沙河</option>
+                                                <option value="宏福校区" >宏福</option>
                                             </select>
                                             <label for="campus">校区</label>
                                         </div>
@@ -105,7 +105,6 @@
                                                 <option value="数字媒体与设计艺术学院">数字媒体与设计艺术学院</option>
                                                 <option value="网络空间安全学院">网络空间安全学院</option>
                                                 <option value="软件学院">软件学院</option>
-												<option value="公共管理学院" disabled>公共管理学院</option>
                                             </select>
                                             <label for="school">学院</label>
                                         </div>
@@ -276,12 +275,13 @@
                 </li>
 			</ul>
         </div>
+    <div class="center">
+        <a href="#notice" class="btn waves-effect waves-light teal lighten-1 modal-trigger">报名须知</a>
+        <button id="submit_btn" class="btn waves-effect waves-light"
+        data-position="bottom" data-delay="50" type="submit">提交
+            <i class="material-icons right">send</i>
+        </button>
 
-	<div class="center">
-                <button id="submit_btn" class="btn waves-effect waves-light"
-                        data-position="bottom" data-delay="50" type="submit">提交
-                    <i class="material-icons right">send</i>
-                </button>
     </div><br>
 
         <div class="container">
