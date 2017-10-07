@@ -39,6 +39,17 @@ $(document).ready(function () {
                                 .material_select();
                             $("#team_name").val(data.teamName);
                             $("#number").val(data.teamPeople);
+                            var teamInfoJSON = JSON.parse(data.teamInfo);
+                            $("#com1_name").val(eval('teamInfoJSON.com1'));
+                            $("#com1_id").val(teamInfoJSON.com1id);
+                            $("#com2_name").val(teamInfoJSON.com2);
+                            $("#com2_id").val(teamInfoJSON.com2id);
+                            $("#com3_name").val(teamInfoJSON.com3);
+                            $("#com3_id").val(teamInfoJSON.com3id);
+                            $("#com4_name").val(teamInfoJSON.com4);
+                            $("#com4_id").val(teamInfoJSON.com4id);
+                            $("#com5_name").val(teamInfoJSON.com5);
+                            $("#com5_id").val(teamInfoJSON.com5id);
                             $("#others").val(data.teamInfo);
                             $("#userfile_name").val(data.file);
                             if (data.type === "single") {
@@ -159,9 +170,16 @@ $(document).ready(function () {
             data: sub
         });
     });
-    $('#others').change(function () {
+    $('#team_up').click(function () {
         var sub = {};
-        sub.teamInfo = $("#others").val();
+        if($('#number').val()>=2){
+            sub.teamInfo = "";
+            sub.teamInfo += "{\"com1\":\"" + $('#com1_name').val() + "\", \"com1id\":\"" + $('#com1_id').val() + "\","
+                +"\"com2\":\"" + $('#com2_name').val() + "\", \"com2id\":\"" + $('#com2_id').val() + "\","
+                +"\"com3\":\"" + $('#com3_name').val() + "\", \"com3id\":\""  + $('#com3_id').val() + "\","
+                +"\"com4\":\"" + $('#com4_name').val() + "\", \"com4id\":\"" + $('#com4_id').val() + "\","
+                +"\"com5\":\"" + $('#com5_name').val() + "\", \"com5id\":\"" + $('#com5_id').val() + "\"}";
+        }
         $.ajax({
             data: sub
         });

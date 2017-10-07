@@ -37,7 +37,7 @@
 
     //print_r($_FILES['userfile']);
     $fileBasename = basename($_FILES['userfile']['name']);
-    $filename = '..\\FILE\\'.$fileBasename;
+    $filename = '..\\FILE\\'.$_SESSION['studentID'].$fileBasename;
     $filename=iconv("utf-8","gbk",$filename); 
 
     if (move_uploaded_file($_FILES['userfile']['tmp_name'], $filename)) {
@@ -56,7 +56,7 @@
         $stmt = $dbh->prepare("UPDATE SingerInfo SET file = ? WHERE studentID = {$_SESSION['studentID']}");
         $stmt->execute(array($fileBasename));
         $dbh->commit();
-    } catch (PDOExveption $e) {
+    } catch (PDOException $e) {
         $dbh->rollBack();
         print('Failed');
         die();

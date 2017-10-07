@@ -45,13 +45,13 @@
             uploading_file = false;
 
             // only update the file from here if we haven't assigned a submit button
-            if (settings.submit_button == null)
+            if (settings.submit_button === null)
             {
               upload_file();
             }
           });
 
-          if (settings.submit_button == null)
+          if (settings.submit_button === null)
           {
             // do nothing
           } else
@@ -71,11 +71,11 @@
 
           var upload_file = function()
           {
-            if($element.val() == '') return settings.onCancel.apply($element, [settings.params]);
+            if($element.val() === '') return settings.onCancel.apply($element, [settings.params]);
 
             // make sure extension is valid
             var ext = $element.val().split('.').pop().toLowerCase();
-            if(true === settings.validate_extensions && $.inArray(ext, settings.valid_extensions) == -1)
+            if(true === settings.validate_extensions && $.inArray(ext, settings.valid_extensions) === -1)
             {
               // Pass back to the user
               settings.onComplete.apply($element, [{status: false, message: 'The select file type is invalid. File must be ' + settings.valid_extensions.join(', ') + '.'}, settings.params]);
@@ -160,4 +160,4 @@
           }
         });
       }
-})( jQuery )
+})( jQuery );
