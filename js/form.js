@@ -81,11 +81,11 @@ $(document).ready(function () {
         }
         if (sub.teamPeople !== 1) {
             sub.teamInfo = "";
-            sub.teamInfo += "{\"com1\":\"" + $('#com1_name').val() + "\", \"com1id\":\"" + $('#com1_id').val() + "\","
-            +"\"com2\":\"" + $('#com2_name').val() + "\", \"com2id\":\"" + $('#com2_id').val() + "\","
-            +"\"com3\":\"" + $('#com3_name').val() + "\", \"com3id\":\""  + $('#com3_id').val() + "\","
-            +"\"com4\":\"" + $('#com4_name').val() + "\", \"com4id\":\"" + $('#com4_id').val() + "\","
-            +"\"com5\":\"" + $('#com5_name').val() + "\", \"com5id\":\"" + $('#com5_id').val() + "\"}";
+            sub.teamInfo += "{\"队员1\":\"" + $('#com1_name').val() + "\", \"队员1学号\":\"" + $('#com1_id').val() + "\","
+            +"\"队员2\":\"" + $('#com2_name').val() + "\", \"队员2学号\":\"" + $('#com2_id').val() + "\","
+            +"\"队员3\":\"" + $('#com3_name').val() + "\", \"队员3学号\":\""  + $('#com3_id').val() + "\","
+            +"\"队员4\":\"" + $('#com4_name').val() + "\", \"队员4学号\":\"" + $('#com4_id').val() + "\","
+            +"\"队员5\":\"" + $('#com5_name').val() + "\", \"队员5学号\":\"" + $('#com5_id').val() + "\"}";
 
         } else sub.teamInfo = null;
 

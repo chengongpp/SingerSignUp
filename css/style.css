@@ -16,7 +16,13 @@ p {
 }
 
 .button-collapse {
-  color: #26a69a;
+  color: #00bf54;
+}
+
+.brand{
+  height: auto;
+  width: auto\9;
+  width:100%;
 }
 
 .parallax-container {
