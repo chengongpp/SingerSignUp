@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-    $('.modal').modal('open');
 
     var $buptid = $('#buptid');
     $buptid.change(function () {//注册
