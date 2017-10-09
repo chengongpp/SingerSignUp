@@ -81,15 +81,7 @@ $(document).ready(function () {
         if (isNaN(sub.teamPeople)) {
             sub.teamPeople = 1;
         }
-        if (sub.teamPeople !== 1) {
-            sub.teamInfo = "";
-            sub.teamInfo += "{\"队员1\":\"" + $('#com1_name').val() + "\", \"队员1学号\":\"" + $('#com1_id').val() + "\","
-            +"\"队员2\":\"" + $('#com2_name').val() + "\", \"队员2学号\":\"" + $('#com2_id').val() + "\","
-            +"\"队员3\":\"" + $('#com3_name').val() + "\", \"队员3学号\":\""  + $('#com3_id').val() + "\","
-            +"\"队员4\":\"" + $('#com4_name').val() + "\", \"队员4学号\":\"" + $('#com4_id').val() + "\","
-            +"\"队员5\":\"" + $('#com5_name').val() + "\", \"队员5学号\":\"" + $('#com5_id').val() + "\"}";
-
-        } else sub.teamInfo = null;
+        sub.teamInfo = $("#others").val();
 
         $.ajax({
             type: "POST",
