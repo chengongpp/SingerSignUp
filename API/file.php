@@ -8,7 +8,7 @@
         die();
     }
     
-    if ($_FILES['userfile']['size'] > 30000000) {
+    if ($_FILES['userfile']['size'] > 8000000) {
         print('Forbidden');
         die();
     }
